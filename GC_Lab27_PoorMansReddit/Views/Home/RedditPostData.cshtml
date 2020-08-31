@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "RedditPostData";
+}
+
+<h1>RedditPostData</h1>
+
+@model RedditPost
+
+@for (int i = 1; i <= 10; i++)
+{
+    <h5>Post #@i</h5>
+    <p>@Model.data.children[i].data.title</p>
+    <img src="@Model.data.children[i].data.thumbnail" />
+    <br />
+    <a href="https://www.reddit.com/@Model.data.children[i].data.permalink">Link</a>
+    <br />
+    <br />
+}
